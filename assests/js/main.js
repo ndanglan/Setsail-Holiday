@@ -93,11 +93,11 @@ $('.owl-carousel').owlCarousel({
         600:{
             items:2
         },
-        1000:{
-            items:2
+        1024:{
+            items:2.3
         },
-        1200:{
-            items:5
+        1300:{
+            items:4.5
         }
     },
     autoplay:true,
@@ -199,5 +199,5 @@ addEvent(window, 'scroll', function(event) {
         btnGoUp.style.position = "unset";
      }
     // console.log(y);
-    console.log(y);
+    // console.log(y);
 }); 
