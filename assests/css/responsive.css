@@ -1,0 +1,32 @@
+
+/* ipad and mobile */
+
+@media (max-width: 64em) {
+    
+    .header{
+        display: none;
+    }
+    .content{
+        left: 0;
+        width:100%;
+    }
+}
+
+/* IPAD */
+
+@media (max-width:64em) and (min-width:48.0625em){
+    :root{
+        --main-height:750px;
+    }
+}
+/* phone and ipadmini */
+@media (max-width:48em){
+    :root{
+        --main-height:700px;
+    }
+
+
+    .themes-bar{
+        display:none;
+    }
+}

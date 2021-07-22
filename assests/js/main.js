@@ -94,7 +94,7 @@ $('.owl-carousel').owlCarousel({
             items:2
         },
         1024:{
-            items:2.3
+            items:2.4
         },
         1300:{
             items:4.5
