@@ -2,14 +2,27 @@
 /* ipad and mobile */
 
 @media (max-width: 64em) {
-    
-    .header{
-        display: none;
+    .main-container{
+        /* position: unset; */
+        
     }
+    .header{
+        position: relative;
+        display: none;
+        top: var(--small-header-height);
+    }
+    .small-header{
+        display:flex;
+        position: fixed;
+    }
+    
     .content{
         left: 0;
         width:100%;
+        top: var(--small-header-height);
     }
+
+       
 }
 
 /* IPAD */
@@ -17,6 +30,103 @@
 @media (max-width:64em) and (min-width:48.0625em){
     :root{
         --main-height:750px;
+        --small-header-height:80px;
+    }
+    .tour-list{
+        height:max-content;
+        grid-template-columns: repeat(3,33.333333%);
+        grid-template-rows: unset;
+    }
+    .tour-item{
+        height:426px;
+    }
+    .form-register{
+        height:max-content;
+    }
+    .form-intro{
+        padding: 0 0 20px;
+    }
+    .form-content{
+        flex-direction: column;
+    }
+    .form-content-register{
+        /* padding: 20px 20px; */
+        margin: 20px 0;
+        width: 50%;
+        margin-right: 0px;
+    }
+    .main-input{
+        height:50px;
+        /* font-size: ; */
+    }
+    .main-input::placeholder{
+        /* color: #fff; */
+        font-size: 16px;
+        line-height:30px;
+    }
+    .form-banner{
+        margin: 20px 0;
+        width:80%;
+    }
+    .expert{
+        height:max-content;
+    }
+    .expert-content{
+        width: 100%;
+        height:max-content;
+        display:grid;
+        grid-template-columns: 48% 4% 48%;
+        grid-template-rows: auto;
+        /* grid-column-gap: 10px; */
+        grid-row-gap: 40px;
+        padding: 40px 80px;
+    }
+    .expert-item{
+        /* margin: 10px; */
+        height:465px;
+        /* flex-basis:50%; */
+        width: 100%;
+    }
+    .expert-info{
+        width:100%;
+    }
+    .themes-bar{
+        width:30%;
+        right:-30%;
+    }
+    .themes-control{
+        top:30%;
+    }
+    .themes-shopping{
+        top: 37%;
+    }
+    .js-themes-trasition-right{
+        right: 0;
+        animation: moveRight linear 0.3s;
+    }
+    
+    .js-themes-trasition-left{
+        right: -30%;
+        animation: moveLeft linear 0.3s;
+    }
+    
+    
+    @keyframes moveRight{
+        from{
+            right: -30%;
+        }
+        to{
+            right: 0;
+        }
+    }
+    
+    @keyframes moveLeft{
+        from{
+            right: 0;
+        }
+        to{
+            right: -30%;
+        }
     }
 }
 /* phone and ipadmini */

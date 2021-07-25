@@ -1,76 +1,108 @@
 // open-close subnav
 
-const btnPage = document.querySelector('.navbar-item-page');
-const btnTour = document.querySelector('.navbar-item-tour');
-const btnDestination = document.querySelector('.navbar-item-destination');
+(()=>{
+    const navBar= document.querySelector(".header-navbar");
 
-const subNavPage =document.querySelector('.sub-nav-page');
-const subNavTour =document.querySelector('.sub-nav-tour');
-const subNavDestination =document.querySelector('.sub-nav-destination');
-// open
+    navBar.addEventListener("click",(event)=>{
+        if(event.target.hasAttribute("data-toggle")){
+            const NavBarItemHasChildren = event.target.parentElement;
+            const subNav = NavBarItemHasChildren.querySelector(".sub-nav");
+            if(NavBarItemHasChildren.classList.contains("active")){
+                subNav.removeAttribute("style");
+                NavBarItemHasChildren.classList.remove("active");
+            }else{
 
-var i=0;
-var j=0;
-var k=0;
-function openSubNavPage(){
-    
-    if(i % 2 == 0){
-        subNavPage.classList.add('sub-nav-open');
-        i++;
-    }else{
-        subNavPage.classList.remove('sub-nav-open');
-        i++;
+                if(navBar.querySelector(".js-navbar.active")){
+                    navBar.querySelector(".js-navbar.active .sub-nav").removeAttribute("style");
+                    navBar.querySelector(".js-navbar.active").classList.remove("active");
+                }
+                NavBarItemHasChildren.classList.add("active");
+                subNav.style.maxHeight = subNav.scrollHeight + "px";
+            }
+        }
+    });
+})();
+
+
+// open register and change overlay's color
+
+
+
+// IPAD PHONE menu
+
+(()=>{
+    const toggleSmallNav = document.querySelector(".js-small-header-menu"),
+    smallNav = document.querySelector(".js-small-navbar"),
+    smallOverlay = document.querySelector(".js-small-overlay"),
+    mediaSize = 1024;
+
+    toggleSmallNav.addEventListener("click",toggleNav);
+    smallOverlay.addEventListener("click",toggleNav);
+
+    function toggleNav(){
+        if( smallOverlay.classList.contains("active")){
+                smallNav.removeAttribute("style");
+                smallNav.classList.remove("small-navbar-open");
+                smallOverlay.classList.remove("active");
+
+                resizeSmall();
+        }else{
+            smallNav.style.maxHeight = smallNav.scrollHeight +"px";
+            // smallNav.style.box-shadow = "1px 1px 2px 2px rgba(0,0,0,0.07);";
+            smallNav.classList.add("small-navbar-open");
+            smallOverlay.classList.add("active");
+        }
     }
-    
-}
-
-function openSubNavTour(){
-    
-    if(j % 2 == 0){
-        subNavTour.classList.add('sub-nav-open');
-        subNavTour.classList.remove('sub-nav-closed');
-        j++;
-    }else{
-        subNavTour.classList.remove('sub-nav-open');
-        subNavTour.classList.add('sub-nav-closed');
-        j++;
+    function resizeSmall(){
+        if(smallNav.querySelector(".js-small-navbar-item.active")){
+            collapseSubNavbar();
+        }
     }
-}
 
-function openSubNavDestination(){
-    
-    if(k % 2 == 0){
-        subNavDestination.classList.add('sub-nav-open');
-        k++;
-    }else{
-        subNavDestination.classList.remove('sub-nav-open');
-        k++;
+    smallNav.addEventListener("click",(event)=>{
+        if(event.target.hasAttribute("data-toggle")){
+
+            const subMenuItemHasChildren = event.target.parentElement;
+            //if subMenuItemHasChildren is already expanded, collapse it
+            if(subMenuItemHasChildren.classList.contains("active")){
+                collapseSubNavbar();
+            }else{
+                if(smallNav.querySelector(".js-small-navbar-item.active")){
+                    // console.log("true");
+                    collapseSubNavbar();
+                }
+                // expand new menuItemhaschildren
+                subMenuItemHasChildren.classList.add("active");
+                const subNavbar = subMenuItemHasChildren.querySelector(".js-small-sub-navbar");
+                subNavbar.style.maxHeight = subNavbar.scrollHeight +"px";
+            } 
+        }
+    });
+
+    function collapseSubNavbar(){
+        smallNav.querySelector(".js-small-navbar-item.active .js-small-sub-navbar").removeAttribute("style");
+        smallNav.querySelector(".js-small-navbar-item.active").classList.remove("active");
     }
-}
+    function resizeFix(){
+        // if smallNav is opened, close it 
+        if(smallNav.classList.contains("small-navbar-open")){
+            toggleNav();
+        }
 
-// close
-function closeSubNavPage(){
-    subNavPage.classList.remove('sub-nav-open');
-}
-
-function closeSubNavTour(){
-    subNavTour.classList.remove('sub-nav-open');
-}
-
-function closeSubNavDestination(){
-    subNavDestination.classList.remove('sub-nav-open');
-}
-
-btnPage.addEventListener('click',openSubNavPage);
-btnTour.addEventListener('click',openSubNavTour);
-btnDestination.addEventListener('click',openSubNavDestination);
-
+        // if subMenuItemHasChildren is expanded , collapse it 
+        if(smallNav.querySelector(".js-small-navbar-item.active")){
+            collapseSubNavbar();
+        }
+    }
+    window.addEventListener("resize",function(){
+        if(this.innerWidth > mediaSize){
+            resizeFix();
+        }
+    });
+})();
 
 
-
-
-
-
+// Slider
 $('#cusSlider').carousel();
 
 // OWL carousel
@@ -117,6 +149,8 @@ $('.postmark-list-icon-left').click(function() {
     // Parameters has to be in square bracket '[]'
     owl.trigger('next.owl.carousel', [300]);
 })
+
+
 
 //  themes appearance
 
@@ -201,3 +235,5 @@ addEvent(window, 'scroll', function(event) {
     // console.log(y);
     // console.log(y);
 }); 
+
+

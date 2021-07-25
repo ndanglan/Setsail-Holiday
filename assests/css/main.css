@@ -11,8 +11,8 @@
     cursor: pointer;
 }
 
-.button:active{
-    outline: none;
+.button:focus{
+    outline: 0;
 }
 .arrow-left{
     position: relative;
