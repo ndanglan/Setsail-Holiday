@@ -177,6 +177,10 @@
         position: unset;
     }
 
+    .content > .slider{
+        height:800px;
+    }
+
     .carousel-control{
         display:none;
     }
