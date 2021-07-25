@@ -98,10 +98,10 @@
         </header>
         <div class="small-overlay js-small-overlay "></div>
         <!-- Form register -->
-        <div class="small-overlay-color"></div>
+        <div class="small-overlay-color js-small-overlay-color"></div>
 
-        <div class="user">
-            <div class="user-wrapper">
+        <div class="user js-user">
+            <div class="user-wrapper js-user-wrapper">
                 <div class="user-header">
                     <div class="user-login">
                         <p>Login</p>
@@ -142,7 +142,7 @@
             </div>
         </div>
         <!--Small header  -->
-        <header class="small-header">
+        <header class="small-header" id="header-small">
             <a class="small-header-menu js-small-header-menu" href="#_">
                 <span class="small-header-menu-icon ti-menu"></span>
             </a>
@@ -150,7 +150,7 @@
                 <img src="./assests/img/logo-mobile-img.png" alt="">
             </a>
             
-            <a class="small-header-registration" href="#_">
+            <a class="small-header-registration js-small-header-user" href="#_">
                 <i class="far fa-user-circle small-header-registration-icon"></i>
             </a>
             <!-- NAV side bar ipad and phone -->
@@ -490,14 +490,14 @@
                 <div class="carousel-inner review-wrap" role="listbox">
                     <div class="review-content mover-1 carousel-item active" data-interval="5000">
                         <img src="./assests/img/viewer-1.png" alt="">
-                        <div class="carousel-caption review-content-caption d-none d-md-block">
+                        <div class="carousel-caption review-content-caption ">
                             <p class="review-comment">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"</p>
                             <span class="review-signature">Marianna Loreto</span>
                         </div>
                     </div>
                     <div class="review-content mover-2 carousel-item" data-interval="5000">
                         <img src="./assests/img/viewer-2.png" alt="">
-                        <div class="carousel-caption review-content-caption d-none d-md-block">
+                        <div class="carousel-caption review-content-caption">
                             <p class="review-comment">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"</p>
                             <span class="review-signature">John Rios</span>
                         </div>
@@ -785,7 +785,7 @@
 
             <!--go Up -->
             <div class="go-Up">
-                <a href="#cusSlider">
+                <a href="#_" class="go-Up-link">
                     Top
                 </a>
             </div>

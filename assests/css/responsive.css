@@ -4,7 +4,6 @@
 @media (max-width: 64em) {
     .main-container{
         /* position: unset; */
-        
     }
     .header{
         position: relative;
@@ -132,10 +131,288 @@
 /* phone and ipadmini */
 @media (max-width:48em){
     :root{
-        --main-height:700px;
+        --main-height:600px;
+        --small-header-height:60px;
+       --subcribe-height:200px;
+       --review-height:600px;
+    }
+    .small-header{
+        padding: 0px;
+        position:relative;
+    }
+    .small-navbar{
+        top: var(--small-header-height);
+        padding: 0 30px;
+    }
+    
+    .small-header-menu{
+        padding: 14px 0;
+        width: 15%;
+    }
+    .small-header-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .small-header-icon >img{
+        height:70%;
+    }
+    .small-header-registration{
+        width: 15%;
+        padding: 10px 0;
+    }
+    .small-header-registration-icon,
+    .small-header-menu-icon{
+        font-size: 20px;
     }
 
+    .user-wrapper{
+        width: 250px;
+        top: 2%;
+        box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+        z-index: 10;
+    }
 
+    .content{
+        position: unset;
+    }
+
+    .carousel-control{
+        display:none;
+    }
+    .carousel-inner .slider-item img{
+        object-fit: cover;
+    }
+    .carousel-inner .slider-content{
+        top: 5%;
+        width: 80%;
+    }
+    .carousel-inner .carousel-item .slider-content .slider-header{
+        font-size: 60px;
+        line-height:70px;
+    }
+    .carousel-inner .carousel-item .slider-content .slider-header > span{
+        /* display:block; */
+        font-size: 40px;
+        line-height: 60px;
+        /* margin: 0 0 20px 5px; */
+    }
+    /* .carousel-inner .carousel-item .slider-content .slider-header > br{
+        height:0;
+    } */
+
+    .subcribe{
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .subcribe-description {
+        flex-basis: 50%;
+        text-align: start;
+    }
+
+    .tour-list{
+        height:max-content;
+        grid-template-columns: 100%;
+        grid-template-rows: unset;
+    }
+    .tour-item{
+        height:500px;
+    }
+    .tour-item-image{
+        width:100%;
+    }
+
+    .postmark-header{
+        width: 80%;
+    }
+    .postmark .postmark-list{
+        padding: 0px 0 40px;
+        margin: 0;
+        display: flex;
+    /* padding-top: 60px; */
+    /* padding: 60px 100px 0; */
+    max-width: 100%;
+    width: 100%;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* padding: 60px 100px 0; */
+    }
+    .postmark-list >.owl-carousel{
+        flex-basis: 60%;
+        width:60%;
+    }
+    .no-js .owl-carousel, .owl-carousel.owl-loaded{
+        display:flex;
+    }
+    .owl-stage-outer .owl-stage > .owl-item{
+        display: flex !important;
+        justify-content: center !important;
+        /* width: 214.4px !important; */
+    }
+    .postmark .postmark-list .owl-carousel .owl-stage-outer{
+        height:100%;
+    }
+    .postmark-list-icon-left, .postmark-list-icon-right{
+        display:none;
+    }
+
+    .carousel-control-next, .carousel-control-prev{
+        display:none;
+    }
+
+    .form-register{
+        height:750px;
+        padding: 0;
+    }
+    .form-intro{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 70%; */
+        justify-content: center;
+        text-align: center;
+        /* flex: 15%; */
+        height: 40%;
+    }
+    .form-intro > p{
+        max-width: 65%;
+        width: 65%;
+    }
+    .main-sub-heading{
+        font-size: 24px;
+        line-height: 28px;
+        margin:0;
+    }
+    .main-heading{
+        font-size: 44px;
+        line-height: 44px;
+        margin: 10px 0;
+    }
+    .main-desc{
+        margin: 10px 0;
+    }
+    .form-content{
+        width: 100%;
+        /* height: 54.5%; */
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 70px; */
+        padding: 0;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .form-content-register{
+        flex-basis: 40%; */
+        /* max-width: 40%; */
+        max-height: 100%;
+        /* width: 40%; */
+        max-width: 70%;
+        width: max-content;
+        height: 100%;
+        max-height: 100%;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        /* margin-right: 30px; */
+        margin: 0;
+        padding: 30px 25px 40px;
+    }
+    .main-input{
+        padding:16px;
+    }
+    .form-banner{
+        display: none;
+    }
+
+    .custom{
+        height:max-content;
+    }
+    .custom-wrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../img/custom-background.jpg);
+        background-size: cover;
+        background-origin: center;
+        padding:  0;
+    }
+    .custom-item{
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 40px 60px;
+    }
+
+    .expert{
+        height: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0px 30px;
+        margin-bottom: 50px;
+    }
+    .expert-header{
+        width: 100%;
+        padding: 0;
+        height: 30%;
+        align-self: center;
+    }
+    .expert-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: max-content;
+        padding: 0 40px;
+        margin-top: 20px;
+    }
+    .expert-item{
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        cursor: default;
+    }
+
+    .subcribe-end{
+        height: var(--review-height);
+        width: 100%;
+    }
+    .subcribe-end-container{
+        padding: 50px 0;
+    }
+    .subcribe-end-logo{
+        width: 100%;
+        height: 20%;
+        line-height: 100px;
+        text-align: center;
+    }
+    .subcribe-end-desc{
+        width:60%;
+    }
+    .subcribe-end-btn{
+        margin-top: 20px;
+    }
+    .go-Up{
+        right: 4%;
+    }
     .themes-bar{
         display:none;
     }

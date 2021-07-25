@@ -34,10 +34,26 @@
     const toggleSmallNav = document.querySelector(".js-small-header-menu"),
     smallNav = document.querySelector(".js-small-navbar"),
     smallOverlay = document.querySelector(".js-small-overlay"),
-    mediaSize = 1024;
 
+    toggleUser = document.querySelector(".js-small-header-user"),
+    smallOverlayColor = document.querySelector(".js-small-overlay-color"),
+    formUser = document.querySelector(".js-user"),
+    formUserWrapper = document.querySelector(".js-user-wrapper"),
+
+    mediaSize = 1024,
+    mediaHeight = 768;
+
+    // CONTROL Navbar
     toggleSmallNav.addEventListener("click",toggleNav);
     smallOverlay.addEventListener("click",toggleNav);
+    
+    
+    // CONTROL REGISTER
+    toggleUser.addEventListener("click",openUserRegister);
+    formUser.addEventListener("click",closeUserRegister);
+    formUserWrapper.addEventListener("click",function(event){
+        event.stopPropagation();
+    })
 
     function toggleNav(){
         if( smallOverlay.classList.contains("active")){
@@ -53,6 +69,23 @@
             smallOverlay.classList.add("active");
         }
     }
+    function openUserRegister(){
+        smallOverlayColor.classList.add("active-1");
+        formUser.classList.add("active-1");
+        if( smallOverlay.classList.contains("active")){
+            smallNav.removeAttribute("style");
+            smallNav.classList.remove("small-navbar-open");
+            smallOverlay.classList.remove("active");
+
+            resizeSmall();
+    }
+    }
+    function closeUserRegister(){
+        smallOverlayColor.classList.remove("active-1");
+        formUser.classList.remove("active-1");
+
+    }
+
     function resizeSmall(){
         if(smallNav.querySelector(".js-small-navbar-item.active")){
             collapseSubNavbar();
@@ -79,6 +112,8 @@
         }
     });
 
+    
+
     function collapseSubNavbar(){
         smallNav.querySelector(".js-small-navbar-item.active .js-small-sub-navbar").removeAttribute("style");
         smallNav.querySelector(".js-small-navbar-item.active").classList.remove("active");
@@ -99,8 +134,46 @@
             resizeFix();
         }
     });
+
+    // change go-Up destination
+    // var value = document.querySelector(".go-Up-link").href;
+    // window.addEventListener("resize",function(){
+    //     if(this.innerWidth < mediaSize){
+    //         document.querySelector(".go-Up-link").setAttribute = ("href","#header-small");
+    //     }else{
+    //         document.querySelector(".go-Up-link").setAttribute = ("href","#cusSlider");
+    //     }
+    // });
+    // console.log(value);
 })();
 
+(()=>{
+    var
+    mediaSize = 768;
+    
+
+    window.addEventListener("resize",function(){
+        var link = document.querySelector(".go-Up-link"),
+        winWidth = window.innerWidth;
+        
+        if(winWidth <= mediaSize){
+            // console.log(winWidth <= mediaSize);
+        //    link = "#header-small";
+           link.setAttribute("href","#header-small");
+        }else{
+            
+            // link = "#cusSlider";
+            link.setAttribute("href","#cusSlider");
+        }
+    });
+    
+    // console.log(link);
+})();
+
+
+// (()=>{
+//     const 
+// })();
 
 // Slider
 $('#cusSlider').carousel();
