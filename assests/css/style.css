@@ -1248,6 +1248,7 @@ html{
     align-items: baseline;
     justify-content:center;
     background-color:#6fdcdf;
+    /* font-size: 14px; */
 }
 
 .main-input{
@@ -1268,7 +1269,7 @@ html{
 .main-input:focus{
     outline:0;
 }
-
+.input-email >input,
 .input-name > input{
     font-size: 14px;
 }
