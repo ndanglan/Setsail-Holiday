@@ -1269,7 +1269,7 @@ html{
 .main-input:focus{
     outline:0;
 }
-.input-email >input,
+.input-email > input,
 .input-name > input{
     font-size: 14px;
 }
