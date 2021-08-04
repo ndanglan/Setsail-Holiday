@@ -28,6 +28,12 @@
   </head>
   <body>
     <div class="main-container">
+        <!-- overlay -->
+        <div class="overlay preloader">
+            <div class="box">
+                <div></div><div></div><div></div>
+            </div>
+        </div>
         <!-- Big-Header -->
         <header class="header">
             <a href="#_" class="header-icon">
@@ -103,16 +109,17 @@
         <div class="user js-user">
             <div class="user-wrapper js-user-wrapper">
                 <div class="user-header">
-                    <div class="user-login">
+                    <div class="user-login used">
                         <p>Login</p>
                     </div>
-                    <div class="user-register used">
+                    <div class="user-register">
                         <p>
                             Register
                         </p>
                     </div>
                 </div>
-                <div class="user-content">
+                <!-- login -->
+                <div class="user-content login active">
                     <h2>Sign In Here!</h2>
                     <p>Log into your account in just a few simple steps</p>
                     <div class="input-name">
@@ -120,7 +127,7 @@
                         <input class="main-input" type="text" placeholder="User Name">
                     </div>
                     <div class="input-password">
-                        <i class="input-icon input-icon-2 far fa-envelope"></i>
+                        <i class="input-icon input-icon-2 fas fa-lock"></i>
                         <input class="main-input" type="password" placeholder="Password">
                     </div>
                     <div class="save-input">
@@ -132,7 +139,29 @@
                     </a>
                     <button class="button form-btn">Sign In</button>
                 </div>
-                <div class="user-footer">
+                <!-- register -->
+                <div class="user-content register-now">
+                    <h2>Register Now!</h2>
+                    <p>Join the Setsail community today & set up a free account</p>
+                    <div class="input-name">
+                        <i class="input-icon input-icon-1 fas fa-user"></i>
+                        <input class="main-input" type="text" placeholder="User Name">
+                    </div>
+                    <div class="input-name">
+                        <i class="input-icon input-icon-2 far fa-envelope"></i>
+                        <input class="main-input" type="email" placeholder="Email">
+                    </div>
+                    <div class="input-password">
+                        <i class="input-icon input-icon-2 fas fa-lock"></i>
+                        <input class="main-input" type="password" placeholder="Password">
+                    </div>
+                    <div class="input-password">
+                        <i class="input-icon input-icon-2 fas fa-lock"></i>
+                        <input class="main-input" type="password" placeholder="Repeat Password">
+                    </div>
+                    <button class="button form-btn">Register</button>
+                </div>
+                <div class="user-footer active">
                     <p>Sign in with Facebook or Google+</p>
                     <div class="link-box">
                         <a href="#_" class="">Facebook</a>
@@ -246,13 +275,13 @@
                 </div>
 
                 <!-- Control slider -->
-                <a class="left carousel-control carousel-control-prev" href="#cusSlider" role="button" data-slide="prev">
+                <a class="left carousel-control carousel-control-prev control-slider-left" href="#cusSlider" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true" >
                         <i class="slider-icon-left ti-angle-left"></i>
                     </span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control carousel-control-next" href="#cusSlider" role="button" data-slide="next">
+                <a class="right carousel-control carousel-control-next control-slider-right" href="#cusSlider" role="button" data-slide="next">
                     <span class="carousel-control-next-icon slider-icon-right" aria-hidden="true">
                         <i class="slider-icon-right ti-angle-right"></i>
                     </span>
@@ -503,11 +532,11 @@
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselReview" role="button" data-slide="prev">
+                <a class="carousel-control-prev review-control-left" href="#carouselReview" role="button" data-slide="prev">
                     <span class="review-icon-left icon-left ti-angle-left carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselReview" role="button" data-slide="next">
+                <a class="carousel-control-next review-control-right" href="#carouselReview" role="button" data-slide="next">
                     <span class="review-icon-right icon-right ti-angle-right carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
@@ -616,7 +645,7 @@
                     </p>
                 </div>
                 <div class="expert-content">
-                    <div class="expert-item" style="background-image: url(./assests/img/teresajames.jpg)">
+                    <div class="expert-item expert-item-1" style="background-image: url(./assests/img/teresajames.jpg)">
                         <!-- <img src="./assests/img/teresajames.jpg" alt=""> -->
                         <div class="expert-info">
                             <div class="expert-info-heading">
@@ -654,7 +683,7 @@
                         </div>
                     </div>
                     <div class="space"></div>
-                    <div class="expert-item" style="background-image: url(./assests/img/janewillis.jpg)">
+                    <div class="expert-item expert-item-2" style="background-image: url(./assests/img/janewillis.jpg)">
                         <!-- <img src="./assests/img/janewillis.jpg" alt=""> -->
                         <div class="expert-info">
                             <div class="expert-info-heading">
@@ -691,7 +720,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="expert-item" style="background-image: url(./assests/img/ralph.jpg)">
+                    <div class="expert-item expert-item-3" style="background-image: url(./assests/img/ralph.jpg)">
                         <!-- <img src="./assests/img/ralph.jpg" alt=""> -->
                         <div class="expert-info">
                             <div class="expert-info-heading">
@@ -729,7 +758,7 @@
                         </div>
                     </div>
                     <div class="space"></div>
-                    <div class="expert-item" style="background-image: url(./assests/img/loriharvey.jpg)">
+                    <div class="expert-item expert-item-4" style="background-image: url(./assests/img/loriharvey.jpg)">
                         <!-- <img src="./assests/img/loriharvey.jpg" alt=""> -->
                         <div class="expert-info">
                             <div class="expert-info-heading">
@@ -785,7 +814,7 @@
 
             <!--go Up -->
             <div class="go-Up">
-                <a href="#_" class="go-Up-link">
+                <a href="#" class="go-Up-link">
                     Top
                 </a>
             </div>
@@ -1284,6 +1313,8 @@
         
 
     </div>
+    <!-- SCROLL REVEAL -->
+    <script src="./assests/js/scrollreveal.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assests/owlcarousel/owl.carousel.min.js"></script>

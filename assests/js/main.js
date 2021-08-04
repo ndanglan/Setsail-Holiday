@@ -310,3 +310,136 @@ addEvent(window, 'scroll', function(event) {
 }); 
 
 
+// control USER
+(()=>{
+    const userRegister = document.querySelector(".user-register"),
+    userLogin = document.querySelector(".user-login"),
+    loginForm = document.querySelector(".login"),
+    registerForm = document.querySelector(".register-now"),
+    userFooter = document.querySelector(".user-footer");
+
+
+    function openRegister(){
+        if(loginForm.classList.contains("active")){
+            registerForm.classList.add("active");
+            userRegister.classList.add("used");
+            userLogin.classList.remove("used");
+            loginForm.classList.remove("active");
+            userFooter.classList.remove("active");
+        }
+    }   
+
+    function openLoginForm(){
+        if(registerForm.classList.contains("active")){
+            registerForm.classList.remove("active");
+            loginForm.classList.add("active");
+            userFooter.classList.add("active");
+            userLogin.classList.add("used");
+            userRegister.classList.remove("used");
+        }
+    }
+
+    userRegister.addEventListener("click",openRegister);
+    userLogin.addEventListener("click",openLoginForm);
+
+})();
+
+
+// PRELOADING
+
+window.addEventListener("load",()=>{
+    document.querySelector(".preloader").classList.add("fade-out");
+    setTimeout(()=>{
+        document.querySelector(".preloader").style.display = "none";
+
+    },1000)
+})
+
+// ---------SCROLL REVEAL ANIMATION-----------
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 1500,
+    reset: true,
+})
+
+
+
+
+sr.reveal(` 
+            .form-banner,
+            .custom-image,
+            .expert-item-1,.expert-item-3`,{
+    origin:'top',
+})
+
+sr.reveal(`.tour-item,
+            .subcribe,
+            .form-content-register,
+            .owl-carousel,
+            .expert-item-2,.expert-item-4,
+            .review-wrap,
+            .subcribe-end-btn`,{
+    origin:'bottom',
+})
+
+sr.reveal(`.tour-item`,{
+    origin:'bottom',
+    interval:50,
+})
+
+
+
+// sr2.reveal(`.left`,{
+//     origin:'left';
+// });
+
+const sr2 = ScrollReveal({
+    distance: '30px',
+    duration: 1000,
+    reset: true,
+})
+
+sr2.reveal(`.control-slider-left,
+            .main-sub-heading,
+            .postmark-desc,
+            .postmark-list-icon-left,
+            .review-control-left,
+            .main-heading,
+            .subcribe-end-logo`,{
+    origin:'left',
+})
+
+sr2.reveal(`.control-slider-right,
+            .postmark-heading,
+            .postmark-list-icon-right,
+            .review-control-right,
+            .expert-description,
+            .subcribe-end-desc`,{
+    origin:'right',
+})
+
+const sr3 = ScrollReveal({
+    distance: '20px',
+    duration: 1500,
+    reset: true,
+})
+
+sr3.reveal(`.custom-image`,{
+    origin:'top',
+})
+
+sr3.reveal(`.custom-heading,.custom-description`,{
+    origin:'bottom',
+})
+
+const sr4 = ScrollReveal({
+    distance: '20px',
+    duration: 1500,
+})
+
+sr4.reveal(`.header`,{
+    origin: 'right',
+})
+
+
+
