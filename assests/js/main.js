@@ -358,7 +358,7 @@ window.addEventListener("load",()=>{
 // ---------SCROLL REVEAL ANIMATION-----------
 const sr = ScrollReveal({
     distance: '60px',
-    duration: 1500,
+    duration: 2800,
     reset: true,
 })
 
@@ -395,7 +395,7 @@ sr.reveal(`.tour-item`,{
 
 const sr2 = ScrollReveal({
     distance: '30px',
-    duration: 1000,
+    duration: 2000,
     reset: true,
 })
 
@@ -420,7 +420,7 @@ sr2.reveal(`.control-slider-right,
 
 const sr3 = ScrollReveal({
     distance: '20px',
-    duration: 1500,
+    duration: 2800,
     reset: true,
 })
 
@@ -434,7 +434,7 @@ sr3.reveal(`.custom-heading,.custom-description`,{
 
 const sr4 = ScrollReveal({
     distance: '20px',
-    duration: 1500,
+    duration: 2000,
 })
 
 sr4.reveal(`.header`,{
