@@ -219,6 +219,19 @@ function appearTheme(){
 
 themeControl.addEventListener('click' , appearTheme);
 
+window.addEventListener('scroll',()=>{
+    if(themeBar.classList.contains('js-themes-trasition-right')){
+        themeIcon.classList.remove('dissapear');
+        themeArrowIcon.classList.add('dissapear');
+        themeBar.classList.remove('js-themes-trasition-right');
+        themeBar.classList.add('js-themes-trasition-left');
+        themeNav[0].classList.remove('js-icon-move-right');
+        themeNav[0].classList.add('js-icon-move-left');
+        themeNav[1].classList.remove('js-icon-move-right');
+        themeNav[1].classList.add('js-icon-move-left');
+    }
+})
+
 
 // go-Up control
 
@@ -310,7 +323,7 @@ window.addEventListener("load",()=>{
 // ---------SCROLL REVEAL ANIMATION-----------
 const sr = ScrollReveal({
     distance: '60px',
-    duration: 2800,
+    duration: 2500,
     reset: true,
 })
 
@@ -374,7 +387,7 @@ sr2.reveal(`.control-slider-right,
 
 const sr3 = ScrollReveal({
     distance: '20px',
-    duration: 2800,
+    duration: 2500,
     reset: true,
 })
 
