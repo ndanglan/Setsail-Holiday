@@ -13,6 +13,7 @@
     .small-header{
         display:flex;
         position: fixed;
+        z-index: 1000;
     }
     
     .content{
@@ -20,7 +21,9 @@
         width:100%;
         top: var(--small-header-height);
     }
-
+    .themes-footer{
+        bottom:-20px;
+    }
        
 }
 
@@ -38,6 +41,17 @@
     }
     .tour-item{
         height:426px;
+    }
+    .postmark .postmark-list{
+        margin-bottom:80px;
+    }
+    .postmark-list-container{
+        width:350px;
+    }
+
+    .postmark-item{
+        width: 292px;
+        box-shadow: none;
     }
     .form-register{
         height:max-content;
@@ -66,6 +80,17 @@
     .form-banner{
         margin: 20px 0;
         width:80%;
+    }
+
+    .review-container{
+        width:80%;
+        max-width:unset;
+    }
+    .review-control-left{
+        left: 5%;
+    }
+    .review-control-right{
+        right: 5%;
     }
     .expert{
         height:max-content;
@@ -187,13 +212,20 @@
     .carousel-inner .slider-item img{
         object-fit: cover;
     }
-    .carousel-inner .slider-content{
-        top: 5%;
-        width: 80%;
+    .carousel-inner .carousel-item .slider-content{
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        margin: 30px auto;
+        left: 0;
+        right: 0;
     }
     .carousel-inner .carousel-item .slider-content .slider-header{
         font-size: 60px;
         line-height:70px;
+    }
+    .carousel-caption >.slider-description{
+        margin: 40px auto;
     }
     .carousel-inner .carousel-item .slider-content .slider-header > span{
         /* display:block; */
@@ -201,6 +233,8 @@
         line-height: 60px;
         /* margin: 0 0 20px 5px; */
     }
+    /* ================================================================================ */
+    /* ==================================================================================== */
     /* .carousel-inner .carousel-item .slider-content .slider-header > br{
         height:0;
     } */
@@ -226,47 +260,40 @@
     .tour-item-image{
         width:100%;
     }
-
+    .postmark{
+        margin: 40px 0 40px;
+    }
     .postmark-header{
-        width: 80%;
+        min-height: 40%;
+        min-width: 50%;
+        width:unset;
+        padding:0 15px;
     }
     .postmark .postmark-list{
-        padding: 0px 0 40px;
-        margin: 0;
-        display: flex;
-    /* padding-top: 60px; */
-    /* padding: 60px 100px 0; */
-    max-width: 100%;
-    width: 100%;
-    height: 60%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    /* padding: 60px 100px 0; */
+        margin-bottom:80px;
     }
-    .postmark-list >.owl-carousel{
-        flex-basis: 60%;
-        width:60%;
+    .postmark-list-container{
+        width:305px;
     }
-    .no-js .owl-carousel, .owl-carousel.owl-loaded{
-        display:flex;
+
+    .postmark-item{
+        width: 248px;
+        box-shadow: none;
     }
-    .owl-stage-outer .owl-stage > .owl-item{
-        display: flex !important;
-        justify-content: center !important;
-        /* width: 214.4px !important; */
-    }
-    .postmark .postmark-list .owl-carousel .owl-stage-outer{
-        height:100%;
-    }
-    .postmark-list-icon-left, .postmark-list-icon-right{
+
+    .swiper-button-next,
+    .swiper-button-prev{
         display:none;
     }
 
-    .carousel-control-next, .carousel-control-prev{
-        display:none;
+    .review-container{
+        width:66.66666%;
+        max-width: 600px;
     }
 
+    .review-comment{
+        margin:20px 0;
+    }
     .form-register{
         height:750px;
         padding: 0;
@@ -315,7 +342,7 @@
         /* max-width: 40%; */
         max-height: 100%;
         /* width: 40%; */
-        max-width: 70%;
+        max-width: 85%;
         width: max-content;
         height: 100%;
         max-height: 100%;
@@ -379,20 +406,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        max-width:  500px;
         height: max-content;
         padding: 0 40px;
         margin-top: 20px;
     }
     .expert-item{
         width: 100%;
-        height: 300px;
+        min-height: 300px;
         margin-bottom: 20px;
-        background-position: center;
+        background-position: top;
         background-size: cover;
         position: relative;
         overflow: hidden;
         cursor: default;
+    }
+
+    .expert-info{
+        width:100%;
     }
 
     .subcribe-end{
@@ -420,4 +451,82 @@
     .themes-bar{
         display:none;
     }
+}
+/* PHONE small */
+
+@media screen and (max-width:21.25em){
+    .carousel-caption >.slider-description{
+        margin: 15px auto;
+        font-size:16px;
+        line-height:24px;
+    }
+    .carousel-inner .carousel-item .slider-content .slider-header > span{
+        font-size:32px;
+        line-height:40px;
+    }
+    .carousel-inner .carousel-item .slider-content .slider-header{
+        font-size: 48px;
+        line-height:56px;
+    }
+    .carousel-inner .carousel-item .slider-content{
+        text-align: center;
+        width: 90%;
+        margin: 30px auto;
+        left: 0;
+        right: 0;
+    }
+    .postmark .postmark-list{
+        margin-bottom:80px;
+    }
+    .postmark-list-container{
+        width:210px;
+    }
+
+    .postmark-item{
+        width: 181px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        display:none;
+    }
+
+    .review-container{
+        max-width:300px;
+    }
+    .review-control-left, 
+    .review-control-right{
+        display:none;
+    }
+
+    .review-content-caption{
+        padding: 0 15px;
+        margin-top: 15px;
+    }
+    .review-comment{
+        font-size:14px;
+        margin-bottom:15px;
+    }
+    .review-signature{
+        font-size: 20px;
+    }
+    .form-content{
+        padding: 0 15px;
+    }
+    .form-content-register{
+        max-width:100%;
+    }
+
+    .expert-content{
+        padding: 0;
+    }
+    .user-wrapper{
+        max-width:unset;
+        width:90%;
+    }
+    .user-header{
+        min-width: unset;
+    }
+
+    
 }

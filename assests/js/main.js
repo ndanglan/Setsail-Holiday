@@ -178,55 +178,7 @@
 // Slider
 $('#cusSlider').carousel();
 
-// OWL carousel
-
-
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
-});
-
-
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    dotsEach:true,
-    // nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1024:{
-            items:2.4
-        },
-        1300:{
-            items:4.5
-        }
-    },
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true
-});
-
-var owl = $('.owl-carousel');
-owl.owlCarousel();
-// Go to the next item
-$('.postmark-list-icon-right').click(function() {
-    owl.trigger('prev.owl.carousel');
-})
-// Go to the previous item
-$('.postmark-list-icon-left').click(function() {
-    // With optional speed parameter
-    // Parameters has to be in square bracket '[]'
-    owl.trigger('next.owl.carousel', [300]);
-})
-
-
-
 //  themes appearance
-
 const themeControl = document.querySelector(".js-themes-control");
 var themeIcon = document.querySelector(".themes-small-icon");
 var themeArrowIcon = document.querySelector(".theme-arrow");
@@ -378,7 +330,8 @@ sr.reveal(`.tour-item,
             .owl-carousel,
             .expert-item-2,.expert-item-4,
             .review-wrap,
-            .subcribe-end-btn`,{
+            .subcribe-end-btn,
+            .postmark-list-container`,{
     origin:'bottom',
 })
 
@@ -414,7 +367,8 @@ sr2.reveal(`.control-slider-right,
             .postmark-list-icon-right,
             .review-control-right,
             .expert-description,
-            .subcribe-end-desc`,{
+            .subcribe-end-desc,
+            .form-desc`,{
     origin:'right',
 })
 
@@ -428,18 +382,48 @@ sr3.reveal(`.custom-image`,{
     origin:'top',
 })
 
-sr3.reveal(`.custom-heading,.custom-description`,{
+sr3.reveal(`.custom-heading,
+            .custom-description`,{
     origin:'bottom',
 })
 
-const sr4 = ScrollReveal({
-    distance: '20px',
-    duration: 2000,
-})
 
-sr4.reveal(`.header`,{
-    origin: 'right',
-})
+
+
+// SWIPER JS
+
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: ".postmark-list-icon-right",
+      prevEl: ".postmark-list-icon-left"
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    // freeMode: true,
+  });
+
+var swiperReview = new Swiper(".review-container", {
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: ".review-control-right",
+      prevEl: ".review-control-left "
+    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    //   },
+    // freeMode: true,
+  });
 
 
 

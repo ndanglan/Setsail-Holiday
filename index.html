@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assests/js/bootstrap.bundle.js">
     <link rel="stylesheet" href="./assests/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./assests/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assests/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assests/css/main.css">
     <link rel="stylesheet" href="./assests/css/style.css">
     <link rel="stylesheet" href="./assests/css/responsive.css">
@@ -245,10 +246,11 @@
 
             <!-- SLider carousel(BOOTSTRAP)-->
             <div class="carousel slide  slider carousel-fade " id="cusSlider" data-ride="carousel">
-                
+                <!--  -->
                 <!-- Wrapper slider -->
                 <div class="carousel-inner slider-wrap" role="listbox">
-                    <div class="carousel-item slider-item active" data-interval="5000" data-wrap="true" data-ride="true">
+                    <div class="carousel-item slider-item active"  data-interval="4000"  data-wrap="true" data-ride="true">
+                        <!-- -->
                         <img src="./assests/img/cities-slide-1.jpg" alt="First Slider" class="imgSlider">
                         <div class=" carousel-caption slider-content">
                             <h1 class="slider-header"><span>Go Out And</span><br>Discover the City</h1>
@@ -256,7 +258,8 @@
                             <button class="button slider-button">View More</button>
                         </div>
                     </div>
-                    <div class="carousel-item slider-item " data-interval="5000" data-wrap="true" data-ride="true">
+                    <div class="carousel-item slider-item" data-interval="4000"  data-wrap="true" data-ride="true">
+                        <!--  -->
                         <img src="./assests/img/cities-slide-2.jpg" alt="Second Slider" class="imgSlider">
                         <div class=" carousel-caption slider-content">
                             <h1 class="slider-header"><span>Enjoy a</span><br>New York Autumn</h1>
@@ -264,7 +267,8 @@
                             <button class="button slider-button">View More</button>
                         </div>
                     </div>
-                    <div class=" carousel-item slider-item" data-interval="5000" data-wrap="true" data-ride="true">
+                    <div class=" carousel-item slider-item" data-interval="4000"  data-wrap="true" data-ride="true">
+                        <!--data-interval="5000" data-wrap="true"  data-ride="true" -->
                         <img src="./assests/img/cities-slide-3.jpg" alt="Third Slider" class="imgSlider">
                         <div class="slider-content carousel-caption">
                             <h1 class="slider-header"><span>Go & Discover</span><br>Wonderful Cities</h1>
@@ -450,96 +454,133 @@
                 </div>
 
                 <div class="postmark-list">
-                    <span class="postmark-list-icon-left icon-left ti-angle-left"></span>
-                    <div class="owl-carousel owl-theme">
-                        <div class="postmark-item postmark-item-usa ">
-                            <img src="./assests/img/usa.jpg" alt="">
-                            <div class="markdown markdown-usa">
-                                <h3>USA</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer</p>
+                    <div class="swiper-container mySwiper postmark-list-container">
+                        <div class="swiper-wrapper postmark-list-wrapper">
+                            <div class="postmark-item postmark-item-usa swiper-slide">
+                                <img src="./assests/img/usa.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        USA
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                      
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="postmark-item postmark-item-greece swiper-slide">
+                                <img src="./assests/img/greece.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        Greece
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="postmark-item postmark-item-france swiper-slide">
+                                <img src="./assests/img/france.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        France
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        
+                                    </p>
+                                </div>   
+                            </div>
+                            <div class="postmark-item postmark-item-italy swiper-slide">
+                                <img src="./assests/img/italy.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        Italy
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                       
+                                    </p>
+                                </div>    
+                            </div>
+                            <div class="postmark-item postmark-item-india swiper-slide">
+                                <img src="./assests/img/india.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        India
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="postmark-item postmark-item-japan swiper-slide">
+                                <img src="./assests/img/Japan.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        Japan
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                   
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="postmark-item postmark-item-thailand swiper-slide">
+                                <img src="./assests/img/thailan.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        Thailand
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        
+                                    </p>
+                                </div>  
+                            </div>
+                            <div class="postmark-item postmark-item-england swiper-slide">
+                                <img src="./assests/img/England.jpg" alt="">
+                                <div class="postmark-item-data">
+                                    <h2 class="postmark-item-title">
+                                        England
+                                    </h2>
+                                    <p class="postmark-item-desc">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="postmark-item postmark-item-greece">
-                                <img src="./assests/img/greece.jpg" alt="">
-                                <div class="markdown markdown-greece">
-                                    <h3>Greece</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
-                        <div class="postmark-item postmark-item-france">
-                                <img src="./assests/img/france.jpg" alt="">
-                                <div class="markdown markdown-france">
-                                    <h3>France</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
-                        <div class="postmark-item postmark-item-italy">
-                                <img src="./assests/img/italy.jpg" alt="">
-                                <div class="markdown markdown-italy">
-                                    <h3>Italy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
-                        <div class="postmark-item postmark-item-india">
-                                <img src="./assests/img/india.jpg" alt="">
-                                <div class="markdown markdown-india">
-                                    <h3>India</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
-                        <div class="postmark-item postmark-item-japan">
-                                <img src="./assests/img/Japan.jpg" alt="">
-                                <div class="markdown markdown-japan">
-                                    <h3>Japan</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
-                        <div class="postmark-item postmark-item-thailand">
-                                <img src="./assests/img/thailan.jpg" alt="">
-                                <div class="markdown markdown-thailand">
-                                    <h3>Thailand</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
-                        <div class="postmark-item postmark-item-england">
-                                <img src="./assests/img/England.jpg" alt="">
-                                <div class="markdown markdown-england">
-                                    <h3>England</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer</p>
-                                </div>
-                        </div>
                     </div>
-
-                    <span class="postmark-list-icon-right icon-right  ti-angle-right"></span>
+                    <div class="postmark-list-icon-left icon-left swiper-button-next"></div>
+                    <div class="postmark-list-icon-right icon-right swiper-button-prev"></div>
                 </div>
             </div>
 
             <!-- comment -->
-            <div class="review carousel slide" id="carouselReview" data-ride="carousel">
-                <div class="carousel-inner review-wrap" role="listbox">
-                    <div class="review-content mover-1 carousel-item active" data-interval="5000">
-                        <img src="./assests/img/viewer-1.png" alt="">
-                        <div class="carousel-caption review-content-caption ">
-                            <p class="review-comment">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"</p>
-                            <span class="review-signature">Marianna Loreto</span>
+            <div class="review " >
+                <div class="review-container swiper-container">
+                    <div class=" review-wrap swiper-wrapper">
+                        <div class="review-content mover-1 swiper-slide" >
+                            <img src="./assests/img/viewer-1.png" alt="">
+                            <div class="review-content-caption ">
+                                <p class="review-comment">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"</p>
+                                <span class="review-signature">Marianna Loreto</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="review-content mover-2 carousel-item" data-interval="5000">
-                        <img src="./assests/img/viewer-2.png" alt="">
-                        <div class="carousel-caption review-content-caption">
-                            <p class="review-comment">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"</p>
-                            <span class="review-signature">John Rios</span>
+                        <div class="review-content mover-2 swiper-slide" >
+                            <img src="./assests/img/viewer-2.png" alt="">
+                            <div class="review-content-caption">
+                                <p class="review-comment">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"</p>
+                                <span class="review-signature">John Rios</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev review-control-left" href="#carouselReview" role="button" data-slide="prev">
-                    <span class="review-icon-left icon-left ti-angle-left carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next review-control-right" href="#carouselReview" role="button" data-slide="next">
-                    <span class="review-icon-right icon-right ti-angle-right carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="review-control-right icon-left swiper-button-next"></div>
+                <div class="review-control-left icon-right swiper-button-prev"></div>
             </div>
 
             <!-- form register -->
@@ -547,7 +588,7 @@
                 <div class="form-intro">
                     <span class="main-sub-heading">Join Now</span>
                     <h1 class="main-heading">Get Our Newsletter</h1>
-                    <p class="main-desc">Lorem ipsum dolor sit amet,
+                    <p class="main-desc form-desc">Lorem ipsum dolor sit amet,
                          consectetuer adipiscing elit. 
                          Aenean commodo ligula eget dolor. 
                          Aenean </p>
@@ -1313,6 +1354,9 @@
         
 
     </div>
+
+    <!-- SwiperJS -->
+    <script src="./assests/js/swiper-bundle.min.js"></script>
     <!-- SCROLL REVEAL -->
     <script src="./assests/js/scrollreveal.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
