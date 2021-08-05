@@ -20,6 +20,7 @@
         left: 0;
         width:100%;
         top: var(--small-header-height);
+        z-index: 10;
     }
     .themes-footer{
         bottom:-20px;
