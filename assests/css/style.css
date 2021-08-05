@@ -1036,6 +1036,7 @@ html{
     );
     color:var(--white-color);
     
+    
 }
 
 .postmark-item-title{
@@ -1051,7 +1052,7 @@ html{
     font-size: 16px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
-    opacity: 0;
+    
     transition:all 0.2s ease;
     transition-delay:0.5s;
     
@@ -1062,6 +1063,9 @@ html{
         transform:translateY(60%);
         transition:all 0.5s ease;
     }
+    .postmark-item-desc{
+        opacity: 0;
+    }
     .postmark-item:hover .postmark-item-data,
     .postmark-item:focus-within .postmark-item-data{
         transform:translateY(0);
@@ -1069,8 +1073,8 @@ html{
     }
     .postmark-item:hover .postmark-item-title,
     .postmark-item:focus-within .postmark-item-title{
-    color:var(--primary-color);
-    text-shadow: 2px 1px rgb(0 0 0 / 50%);
+        color:var(--primary-color);
+        text-shadow: 2px 1px rgb(0 0 0 / 50%);
     }
     .postmark-item:hover .postmark-item-desc,
     .postmark-item:focus-within .postmark-item-desc{

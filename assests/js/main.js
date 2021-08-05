@@ -415,10 +415,10 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".postmark-list-icon-right",
       prevEl: ".postmark-list-icon-left"
     },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    //   },
     // freeMode: true,
   });
 
