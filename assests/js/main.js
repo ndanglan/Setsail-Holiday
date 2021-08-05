@@ -51,6 +51,7 @@
     // CONTROL REGISTER
     toggleUser.addEventListener("click",openUserRegister);
     formUser.addEventListener("click",closeUserRegister);
+    window.addEventListener("resize",closeUserRegister);
     formUserWrapper.addEventListener("click",function(event){
         event.stopPropagation();
     })
@@ -306,6 +307,8 @@ addEvent(window, 'scroll', function(event) {
 
     userRegister.addEventListener("click",openRegister);
     userLogin.addEventListener("click",openLoginForm);
+
+    
 
 })();
 
