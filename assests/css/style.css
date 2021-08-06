@@ -42,7 +42,6 @@ html{
     padding:100px 50px 30px;
     box-shadow: 0 3px 13px 0 rgb(0 0 0 / 10%);
     outline: 0;
-    background-color: transparent;
     z-index: 2;
 }
 
@@ -230,6 +229,7 @@ html{
     transition: all ease-out 0.3s;
     /* align-self: center; */
     overflow: scroll;
+    box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 10%);
 }
 
 .user-wrapper::-webkit-scrollbar{
@@ -407,17 +407,17 @@ html{
 }
 
 .small-header{
-        display:none;
-        position: absolute;
-        top: 0;
-        height:var(--small-header-height);
-        width:100%;
-        background-color:var(--primary-color);
-        align-items: center;
-        justify-content:space-around;
-        z-index: 4;
-        padding: 20px;
-        box-shadow: -1px 1px 2px 2px rgba(0,0,0,0.1);
+    display:none;
+    position: absolute;
+    top: 0;
+    height::var(--small-header-height);
+    width:100%;
+    background-color:var(--primary-color);
+    align-items: center;
+    justify-content:space-around;
+    z-index: 4;
+    padding: 20px;
+    box-shadow: -1px 1px 2px 2px rgba(0,0,0,0.1);
 }
 .small-header-menu{
     padding: 8px 0;
@@ -458,7 +458,7 @@ html{
 /* NAV side bar ipad and phone */
 .small-navbar{
     position:absolute;
-    top: 80px;
+    top: 113px;
     left: 0;
     padding: 0px 115px;
     background-color: var(--white-color);
@@ -468,7 +468,6 @@ html{
     overflow:hidden scroll;
     z-index: -2;
     transition: all ease 0.3s;
-    
 }
 
 .small-navbar-open::-webkit-scrollbar{
@@ -481,7 +480,11 @@ html{
 }
 
 .small-navbar-wrapper{
+    visibility: hidden;
     padding: 10px 0;
+}
+.small-navbar-wrapper.visible{
+    visibility: visible;
 }
 .small-navbar-wrapper ul{
     padding: 0;

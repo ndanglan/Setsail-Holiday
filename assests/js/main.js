@@ -34,7 +34,7 @@
     const toggleSmallNav = document.querySelector(".js-small-header-menu"),
     smallNav = document.querySelector(".js-small-navbar"),
     smallOverlay = document.querySelector(".js-small-overlay"),
-
+    smallNavWrapper = document.querySelector(".small-navbar-wrapper"),
     toggleUser = document.querySelector(".js-small-header-user"),
     smallOverlayColor = document.querySelector(".js-small-overlay-color"),
     formUser = document.querySelector(".js-user"),
@@ -61,13 +61,14 @@
                 smallNav.removeAttribute("style");
                 smallNav.classList.remove("small-navbar-open");
                 smallOverlay.classList.remove("active");
-
+                smallNavWrapper.classList.remove("visible");
                 resizeSmall();
         }else{
             smallNav.style.maxHeight = smallNav.scrollHeight +"px";
             // smallNav.style.box-shadow = "1px 1px 2px 2px rgba(0,0,0,0.07);";
             smallNav.classList.add("small-navbar-open");
             smallOverlay.classList.add("active");
+            smallNavWrapper.classList.add("visible");
         }
     }
     function openUserRegister(){
@@ -342,7 +343,6 @@ sr.reveal(`
 
 sr.reveal(`.tour-item,
             .subcribe,
-            .form-content-register,
             .owl-carousel,
             .expert-item-2,.expert-item-4,
             .review-wrap,
