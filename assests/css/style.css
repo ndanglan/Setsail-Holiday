@@ -23,6 +23,18 @@ html{
     scroll-behavior: smooth;
 }
 
+input[type="text"] {
+    -webkit-appearance: none;
+}
+
+input[type="email"] {
+    -webkit-appearance: none;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
 
 .main-container{
     position: relative;
