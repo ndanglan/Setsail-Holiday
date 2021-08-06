@@ -330,12 +330,19 @@ const sr = ScrollReveal({
     duration: 2500,
     reset: true,
 })
+const srBanner = ScrollReveal({
+    distance: '60px',
+    duration: 2500,
+    reset: true,
+    mobile: false,
+})
 
 
-
-
+srBanner.reveal(`.form-banner`,{
+    origin:'top',
+})
 sr.reveal(` 
-            .form-banner,
+            ,
             .custom-image,
             .expert-item-1,.expert-item-3`,{
     origin:'top',
