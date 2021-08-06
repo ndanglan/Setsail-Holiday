@@ -67,6 +67,7 @@
         margin: 20px 0;
         width: 50%;
         margin-right: 0px;
+        height: max-content;
     }
     .main-input{
         height:50px;
@@ -353,12 +354,10 @@
     .form-content-register{
         flex-basis: 40%; */
         /* max-width: 40%; */
-        max-height: 100%;
         /* width: 40%; */
         max-width: 85%;
         width: max-content;
-        height: 100%;
-        max-height: 100%;
+        height: max-content;
         background-color: var(--primary-color);
         color: var(--white-color);
         display: flex;
@@ -534,6 +533,7 @@
     }
     .form-content-register{
         max-width:100%;
+        height:max-content;
     }
 
     .expert-content{
