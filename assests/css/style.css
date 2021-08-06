@@ -23,22 +23,13 @@ html{
     scroll-behavior: smooth;
 }
 
-input[type="text"] {
+input{
     -webkit-appearance: none;
+    -webkit-border-radius: 0;
 }
-
-input[type="email"] {
+input[type="text"], input[type="button"],input[type="email"] {
     -webkit-appearance: none;
-}
-
-input[type="submit"] {
-    -webkit-appearance: none;
-}
-
-
-.main-container{
-    position: relative;
-    width:100%;
+    -webkit-border-radius: 0;
 }
 
 /* Header */
