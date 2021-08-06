@@ -110,6 +110,7 @@
                 subMenuItemHasChildren.classList.add("active");
                 const subNavbar = subMenuItemHasChildren.querySelector(".js-small-sub-navbar");
                 subNavbar.style.maxHeight = subNavbar.scrollHeight +"px";
+                smallNav.style.maxHeight = smallNav.scrollHeight + subNavbar.scrollHeight + "px";
             } 
         }
     });
