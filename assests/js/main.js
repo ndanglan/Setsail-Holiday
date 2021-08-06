@@ -341,9 +341,7 @@ const srBanner = ScrollReveal({
 srBanner.reveal(`.form-banner`,{
     origin:'top',
 })
-sr.reveal(` 
-            ,
-            .custom-image,
+sr.reveal(` .custom-image,
             .expert-item-1,.expert-item-3`,{
     origin:'top',
 })
