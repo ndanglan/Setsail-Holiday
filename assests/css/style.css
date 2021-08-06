@@ -204,7 +204,7 @@ input {
     z-index:1007;
     top: 1%;
     right:0;
-    height:768px;
+    min-height: 120vh;
     width: 100%;
     visibility: hidden;
     opacity: 0;
