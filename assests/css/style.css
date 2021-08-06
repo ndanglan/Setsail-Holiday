@@ -22,14 +22,12 @@ html{
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-input{
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-}
-input[type="text"], input[type="button"],input[type="email"] {
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
 }
 
 /* Header */
@@ -1279,6 +1277,7 @@ input[type="text"], input[type="button"],input[type="email"] {
     background-color:var(--white-color);
     color:#000;
     margin-top: 10px;
+    border-radius:3px;
     width: 100%;
     transition: background-color 0.25s linear;
 }
