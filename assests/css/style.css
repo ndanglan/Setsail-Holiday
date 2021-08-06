@@ -1237,6 +1237,8 @@ input {
     justify-content:center;
     background-color:#6fdcdf;
     /* font-size: 14px; */
+    --webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .main-input{
@@ -1245,6 +1247,8 @@ input {
     color: #fff;
     width:100%;
     padding: 12px;
+    --webkit-appearance: none;
+    -moz-appearance: none;
     
 }
 
@@ -1260,11 +1264,15 @@ input {
 .input-email > input,
 .input-name > input{
     font-size: 14px;
+    --webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .input-icon{
     font-size: 14px;
     padding: 12px 5px 12px 15px;
+    --webkit-appearance: none;
+    -moz-appearance: none;
 }
 /* .input-icon-1{
     margin-bottom:2px;
@@ -1280,6 +1288,8 @@ input {
     border-radius:3px;
     width: 100%;
     transition: background-color 0.25s linear;
+    --webkit-appearance: none;
+    -moz-appearance: none;
 }
 .form-btn:hover{
     background-color:#227b7e;
