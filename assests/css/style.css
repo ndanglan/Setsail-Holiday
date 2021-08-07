@@ -1175,7 +1175,8 @@ input {
     /* width:70%; */
     justify-content:center;
     text-align: center;
-    height:30%;
+    height:fit-content;
+    margin-bottom: 15px;
 }
 
 .form-intro> h1{
@@ -1202,14 +1203,14 @@ input {
 
 .form-content-register{
     width:max-content;
-    height:max-content;
+    height:100%;
     background-color: var(--primary-color);
     color: var(--white-color);
     display:flex;
     flex-direction: column;
     justify-content:center;
     margin-right: 30px;
-    padding: 30px 40px 40px;
+    padding: 30px 40px;
 }
 
 .form-content-register > h2{
