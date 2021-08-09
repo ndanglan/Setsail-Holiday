@@ -30,11 +30,11 @@
   <body>
     <div class="main-container">
         <!-- overlay -->
-            <div class="overlay preloader">
+        <div class="overlay preloader">
                 <div class="box">
                     <div></div><div></div><div></div>
                 </div>
-            </div>
+        </div>
         <!-- Header -->
         <header class="header">
             <a href="#_" class="header-icon">
@@ -120,53 +120,71 @@
                     </div>
                 </div>
                 <!-- login -->
-                <form class="user-content login active">
+                <form class="user-content login active" method="POST" action="" id="form-1">
                     <h2>Sign In Here!</h2>
                     <p>Log into your account in just a few simple steps</p>
-                    <div class="input-name">
-                        <i class="input-icon input-icon-1 fas fa-user"></i>
-                        <input class="main-input" type="text" placeholder="User Name">
+                    <div class="form-group">
+                        <div class="form-wrapper">
+                            <label for="user-name" class="form-label  fas fa-user"></label>
+                            <input class="form-control" type="text" name="user-name" placeholder="User Name" id="user-name">
+                        </div>
+                        <span class="form-message"></span>
                     </div>
-                    <div class="input-password">
-                        <i class="input-icon input-icon-2 fas fa-lock"></i>
-                        <input class="main-input" type="password" placeholder="Password">
+                    <div class="form-group">
+                        <div class="form-wrapper">
+                            <label for="user-password" class="form-label  fas fa-lock"></label>
+                            <input class="form-control" type="password" name="user-password" placeholder="User Password" id="user-password">
+                        </div>
+                        <span class="form-message"></span>
                     </div>
                     <div class="save-input">
                         <input type="radio" id="remember" name="remember" value="Remember">
                         <label for="remember">Remember me</label>
                     </div>
-                    <a class="lost-password" href="#_">
+                    <a class="lost-password" href="#">
                         Lost Your Password?
                     </a>
                     <button class="button form-btn">Sign In</button>
                 </form>
                 <!-- register -->
-                <div class="user-content register-now">
+                <form class="user-content register-now" action="" method="POST" id="form-3">
                     <h2>Register Now!</h2>
                     <p>Join the Setsail community today & set up a free account</p>
-                    <div class="input-name">
-                        <i class="input-icon input-icon-1 fas fa-user"></i>
-                        <input class="main-input" type="text" placeholder="User Name">
+                    <div class="form-group">
+                        <div class="form-wrapper">
+                            <label for="user-name-regis" class="form-label  fas fa-user"></label>
+                            <input class="form-control" type="text" placeholder="User Name" id="user-name-regis" name="user-name-regis">
+                        </div>
+                        <span class="form-message"></span>
                     </div>
-                    <div class="input-name">
-                        <i class="input-icon input-icon-2 far fa-envelope"></i>
-                        <input class="main-input" type="email" placeholder="Email">
+                    <div class="form-group">
+                        <div class="form-wrapper">
+                            <label for="user-email-regis" class="form-label  fas fa-envelope"></label>
+                            <input class="form-control" type="email" placeholder="Email" id="user-email-regis" name="user-email-regis">
+                        </div>
+                        <span class="form-message"></span>
                     </div>
-                    <div class="input-password">
-                        <i class="input-icon input-icon-2 fas fa-lock"></i>
-                        <input class="main-input" type="password" placeholder="Password">
+                    <div class="form-group">
+                        <div class="form-wrapper">
+                            <label for="user-password-regis" class="form-label fas fa-lock"></label>
+                            <input class="form-control" type="password" placeholder="Password" id="user-password-regis" name="user-password-regis">
+                        </div>
+                        <span class="form-message"></span>
                     </div>
-                    <div class="input-password">
-                        <i class="input-icon input-icon-2 fas fa-lock"></i>
-                        <input class="main-input" type="password" placeholder="Repeat Password">
+                    <div class="form-group">
+                        <div class="form-wrapper">
+                            <label class="form-label fas fa-lock"></label>
+                            <input class="form-control" type="password" placeholder="Repeat Password" id="user-password-regis-confirm">
+                        </div>
+                        <span class="form-message"></span>
                     </div>
                     <button class="button form-btn">Register</button>
-                </div>
+                </form>
                 <div class="user-footer active">
                     <p>Sign in with Facebook or Google+</p>
                     <div class="link-box">
-                        <a href="#_" class="">Facebook</a>
-                        <a href="#_" class="">Google+</a>
+                        <a href="#" class="">Facebook</a>
+                        <a href="#" class="">Google+</a>
                     </div>
                 </div>
             </div>
@@ -583,7 +601,7 @@
                 <div class="review-control-left icon-right swiper-button-prev"></div>
             </div>
 
-            <!-- form register -->
+            <!-- form register saleoff-->
             <div class="form-register">
                 <div class="form-intro">
                     <span class="main-sub-heading">Join Now</span>
@@ -597,14 +615,18 @@
                     <form action="" class="form-content-register" method="POST" id="form-2">
                         <h2>Newsletter</h2>
                         <p>Get your daily dose of travel news & tips.<span> Sign up today!</span></p>
-                        <div class="input-name">
-                            <i class="input-icon input-icon-1 fas fa-user"></i>
-                            <input class="main-input" type="text" placeholder="Name">
+                        <div class="form-group">
+                            <div class="form-wrapper">
+                                <label for="name" class="form-label fas fa-user"></label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                            </div>
                             <span class="form-message"></span>
                         </div>
-                        <div class="input-email">
-                            <i class="input-icon input-icon-2 far fa-envelope"></i>
-                            <input class="main-input" type="email" placeholder="Email">
+                        <div class="form-group">
+                            <div class="form-wrapper">
+                                <label for="email" class="form-label far fa-envelope"></label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
                             <span class="form-message"></span>
                         </div>
                         <button class="button form-btn">Subcribe</button>
@@ -1353,10 +1375,10 @@
             
         </section> 
 
-        
-
     </div>
 
+
+    
     <!-- SwiperJS -->
     <script src="./assests/js/swiper-bundle.min.js"></script>
     <!-- SCROLL REVEAL -->
@@ -1368,5 +1390,61 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./assests/js/main.js"></script>
+
+    <script src="./assests/js/validator.js"></script>
+    <!-- RULE FORM VALIDATION -->
+    <script>
+        Validator({
+            form:'#form-1',
+            formGroupSelector:'.form-group',
+            errorSelector:".form-message",
+            rules:[
+                Validator.isRequired('#user-name','Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isRequired('#user-password'),
+                Validator.minLength('#user-password',6),
+            ],
+            onSubmit: function(nameData, data){
+                console.log(nameData);
+                console.log(data);
+            }
+        });
+
+        Validator({
+            form:'#form-3',
+            formGroupSelector:'.form-group',
+            errorSelector:".form-message",
+            rules:[
+                Validator.isRequired('#user-name-regis','Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isRequired('#user-email-regis'),
+                Validator.isEmail('#user-email-regis'),
+                Validator.isRequired('#user-password-regis'),
+                Validator.minLength('#user-password-regis',6),
+                Validator.isRequired('#user-password-regis-confirm'),
+                Validator.isConfirmed('#user-password-regis-confirm',function(){
+                    return document.querySelector('#form-3 #user-password-regis').value;
+                },'Mật khẩu nhập lại không hợp lệ')
+            ],
+            onSubmit: function(nameData, data){
+                console.log(nameData);
+                console.log(data);
+            }
+        });
+
+
+        Validator({
+            form:'#form-2',
+            formGroupSelector:'.form-group',
+            errorSelector:".form-message",
+            rules:[
+                Validator.isRequired('#name','Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email')
+            ],
+            onSubmit: function(nameData, data){
+                console.log(nameData);
+                console.log(data);
+            }
+        });
+    </script>
   </body>
 </html>

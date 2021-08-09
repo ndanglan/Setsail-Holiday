@@ -1208,7 +1208,7 @@ input {
 
 .form-content-register{
     width:max-content;
-    height:100%;
+    min-height:100%;
     background-color: var(--primary-color);
     color: var(--white-color);
     display:flex;
@@ -1231,61 +1231,63 @@ input {
     margin-bottom:10px;
 }
 
-.input-password,
-.input-email,
-.input-name{
-    margin: 10px 0 5px;
-    max-width:100%;
-    height:fit-content;
-    width:100%;
+.form-group{
+    /* margin: 0 0 15px; */
+}
+.form-wrapper{
     display:flex;
-    align-items: baseline;
+    background-color:var(--primary-color);
+    height:50px;
+    border-radius:2px;
+    /* padding: 10px; */
+}
+
+.form-label{
+    flex-basis: 15%;
+    font-size: 14px;
+    display:flex !important;
+    text-align:center;
+    margin: 0;
+    align-items: center;
     justify-content:center;
-    background-color:#6fdcdf;
-    /* font-size: 14px; */
-    --webkit-appearance: none;
-    -moz-appearance: none;
+    background-color: #6fdcdf;
 }
 
-.main-input{
+.form-control{
+    height:100%;
+    flex-basis: 85%;
+    background-color:#6fdcdf;
     border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    --webkit-appearance: none;
+}
+
+.form-control::placeholder{
+    font-size:14px;
+    color:var(--white-color);
+}
+.form-control:focus{
+    outline:none;
+    box-shadow: none;
+    border:none;
     background-color:#6fdcdf;
-    color: #fff;
-    width:100%;
-    padding: 12px;
-    --webkit-appearance: none;
-    -moz-appearance: none;
-    
+    color:var(--white-color);
 }
 
-.main-input::placeholder{
-    color: #fff;
-    font-size: 14px;
-    line-height:16px;
+
+.form-group.invalid .form-wrapper {
+    border:1px solid #f33a58;
 }
 
-.main-input:focus{
-    outline:0;
-}
-.input-email > input,
-.input-name > input{
-    font-size: 14px;
-    --webkit-appearance: none;
-    -moz-appearance: none;
+.form-group.invalid .form-message{
+    color:#f33a58;
 }
 
-.input-icon{
-    font-size: 14px;
-    padding: 12px 5px 12px 15px;
-    --webkit-appearance: none;
-    -moz-appearance: none;
+.form-message{
+    font-size:12px;
+    font-family: 'Poppins', sans-serif;
 }
-/* .input-icon-1{
-    margin-bottom:2px;
-}
-.input-icon-2{
-    margin-bottom:1px;
-} */
 
 .form-btn{
     background-color:var(--white-color);
